@@ -14,4 +14,11 @@ class RetrofitFactory {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
+
+    fun getCharacterService() : CharacterService{
+        return RETROFIT_FACTORY
+            .create(CharacterService::class.java)
+    }
+
 }
+
